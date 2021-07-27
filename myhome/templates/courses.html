@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<!--<h2 align="center">ALL COURSES</h2>-->
+<!--{% for item in  clist%}-->
+<!--        <ul>-->
+<!--        <li><H1>{{item.name}}</H1></li>-->
+<!--&lt;!&ndash;            <li><strong>{{item.cid}}</strong></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a href="/notes?cid={{item.cid}}" class="btn hvr-hover" style="background-color : gray;color:white">PDF</a><br><br>&ndash;&gt;-->
+<!--            <a href="/notes?cid={{item.cid}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">PDFs</a><br><br>-->
+<!--        <p>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
+<!--        </ul>-->
+<!--    {% endfor %}-->
+
+<div class="col-sm-10 blog-main">
+      	<div class="blog-post">
+          	<div class="row">
+              	{% for item in clist %}
+                  	<div class="col-md-6">
+                    	<div class="thumbnail" style="margin-left: 20%;margin-right: 20%">
+                        	<a align=center href="/notes?cid={{item.cid}}">
+                            	<img src="{% if item.image %} {% static 'all_images/' %}{{item}}.png {% else %} {% static 'all_images/default.png' %} {% endif %}" alt="..." style="height: auto; width: auto">
+                        	</a>
+
+                        	<div class="caption">
+								<h3 class="text-center"><strong>{{item.name}}</strong></h3>
+<!--                            	<h3 class="text-center">-->
+<!--                                	<a href="/notes?cid={{item.cid}}">Notes</a>-->
+<!--                            	</h3>-->
+
+                        	</div>
+                    	</div>
+                  	</div>
+              	{% endfor %}
+          	</div>
+
+<!--			<center>-->
+<!--				<a href="{% url 'Index' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >HOME PAGE</a><br><br-->
+<!--			</center>-->
+
+
+{% endblock %}

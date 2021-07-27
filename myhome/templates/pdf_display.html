@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<!--<h2 align="center">ALL PDF</h2>-->
+<!--{% for item in pdf_list%}-->
+<!--    <script>-->
+<!--        var name={{item.pdf_name}}-->
+<!--    </script>-->
+<!--        <ul>-->
+<!--        <li><strong>{{item.pdf_name}}</strong></li>-->
+<!--            <li><strong>{{item.course_id}}</strong></li>-->
+<!--&lt;!&ndash;            <a href="{% static 'all_pdf/' %}{{item}}"  class="btn hvr-hover" style="background-color : gray;color:white" target="_blank">click me</a>&ndash;&gt;-->
+<!--            <a href="{% static 'all_pdf/' %}{{item}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" target="_blank">PDF</a><br><br>-->
+<!--        <p>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
+<!--        </ul>-->
+<!--    {% endfor %}-->
+
+
+
+<div class="col-sm-10 blog-main">
+<!--	<a href="javascript:history.go(-1);" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" >Back</a><br><br><br>-->
+      	<div class="blog-post">
+          	<div class="row">
+              	{% for item in pdf_list %}
+                  	<div class="col-md-4">
+                    	<div class="thumbnail" style="margin-left: 20%;margin-right: 20%">
+                        	<a align=center href="{% static 'all_pdf/' %}{{item}}" target="_blank">
+                            	<img src="{% static 'PDF.png' %}" alt="..." style="height: 150px; width: auto">
+                        	</a>
+                        	<div class="caption">
+                            	<h3 class="text-center">
+                                	<a href="{% static 'all_pdf/' %}{{item}}" target="_blank">{{item.pdf_name}}</a>
+                            	</h3>
+                        	</div>
+                    	</div>
+                  	</div>
+              	{% endfor %}
+			</div>
+
+<!--			<center>-->
+<!--				<br>-->
+<!--			<a href="{% url 'Index' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">HOME PAGE</a><br><br>-->
+<!--			</center>-->
+
+{% endblock %}
+
+
+<!--<p>{{cname}}</p>-->

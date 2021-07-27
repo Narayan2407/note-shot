@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block body %}
+{% load static %}
+<!--<div class="row">-->
+<!--            <div class="col-md-2">-->
+<!--                <a href="/courses?category=6" class='btn btn-primary btn-lg' role="button" aria-pressed="true">Sixth Semester</a><br><br>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--<div class="row">-->
+<!--            <div class="col-md-2">-->
+<!--                <a href="/courses?category=5" class='btn btn-primary btn-lg' role="button" aria-pressed="true">Fifth Semester</a><br><br>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--<div class="row">-->
+<!--            <div class="col-md-2">-->
+<!--                <a class='btn btn-primary btn-lg' href="/courses?category=4">Fourth Semester</a><br><br>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--<div class="row">-->
+<!--            <div class="col-md-2">-->
+<!--                <a href="/courses?category=3" class='btn btn-primary btn-lg' role="button" aria-pressed="true">Third Semester</a><br><br>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<div class="col-md-4">
+                    	<div class="thumbnail" style="margin-left: 20%;margin-right: 20%">
+                        	<a align=center href="/courses?category=3" >
+                            	<img src="{% static '3.png' %}" alt="..." style="height: 200px; width: auto">
+                        	</a>
+                        	<div class="caption">
+                            	<h3 class="text-center">
+                                	<a href="/courses?category=3">Third Semester</a>
+                            	</h3>
+                        	</div>
+                        </div>
+	<br><br>
+</div>
+
+
+<div class="col-md-4">
+                    	<div class="thumbnail" style="margin-left: 20%;margin-right: 20%">
+                        	<a align=center href="/courses?category=4" >
+                            	<img src="{% static '4.png' %}" alt="..." style="height: 200px; width: auto">
+                        	</a>
+                        	<div class="caption">
+                            	<h3 class="text-center">
+                                	<a href="/courses?category=4">Fourth Semester</a>
+                            	</h3>
+                        	</div>
+                    	</div>
+	<br><br>
+    </div>
+
+    <div class="col-md-4">
+                    	<div class="thumbnail" style="margin-left: 20%;margin-right: 20%">
+                        	<a align=center href="/courses?category=5" >
+                            	<img src="{% static '5.png' %}" alt="..." style="height: 200px; width: auto">
+                        	</a>
+                        	<div class="caption">
+                            	<h3 class="text-center">
+                                	<a href="/courses?category=5">Fifth Semester</a>
+                            	</h3>
+                        	</div>
+                    	</div>
+		<br><br>
+        </div>
+
+        <div class="col-md-4">
+                    	<div class="thumbnail" style="margin-left: 20%;margin-right: 20%">
+                        	<a align=center href="/courses?category=6" >
+                            	<img src="{% static '6.png' %}" alt="..." style="height: 200px; width: auto">
+                        	</a>
+                        	<div class="caption">
+                            	<h3 class="text-center">
+                                	<a href="/courses?category=6">Sixth Semester</a>
+                            	</h3>
+                        	</div>
+                    	</div>
+			<br><br>
+            </div>
+
+{% endblock %}
+
